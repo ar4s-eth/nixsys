@@ -12,6 +12,8 @@
 
   inputs = {
     # package repos
+    # devshell.url = "github:numtide/devshell"; # from gh/yqrashawn
+    # flake-utils.url = "github:numtide/flake-utils"; # from gh/yqrashawn
     stable.url = "github:nixos/nixpkgs/nixos-22.11";
     nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -34,7 +36,159 @@
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.url = "github:numtide/treefmt-nix";    
+    small.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    sops-nix.url = "github:Mic92/sops-nix";
+
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+
+    comma = {
+      url = "github:nix-community/comma";
+      flake = false;
+    };
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
+    clojure-deps-edn = {
+      url = "github:practicalli/clojure-deps-edn";
+      flake = false;
+    };
+
+    spacehammer = {
+      url = "github:agzam/spacehammer";
+      flake = false;
+    };
+
+    forgit = {
+      url = "github:wfxr/forgit";
+      flake = false;
+    };
+    zsh-f-sy-h = {
+      url = "github:z-shell/F-Sy-H";
+      flake = false;
+    };
+    zsh-abbrev-alias = {
+      url = "github:momo-lab/zsh-abbrev-alias";
+      flake = false;
+    };
+    zsh-alias-tips = {
+      url = "github:djui/alias-tips";
+      flake = false;
+    };
+    tmux-conf = {
+      url = "github:gpakosz/.tmux";
+      flake = false;
+    };
+    zsh-autoquoter = {
+      url = "github:ianthehenry/zsh-autoquoter";
+      flake = false;
+    };
+    asdf-java = {
+      url = "github:halcyon/asdf-java";
+      flake = false;
+    };
+    asdf-clojure = {
+      url = "github:halcyon/asdf-clojure";
+      flake = false;
+    };
+    asdf-nodejs = {
+      url = "github:asdf-vm/asdf-nodejs";
+      flake = false;
+    };
+    asdf-python = {
+      url = "github:danhper/asdf-python";
+      flake = false;
+    };
+    asdf-ruby = {
+      url = "github:asdf-vm/asdf-ruby";
+      flake = false;
+    };
+    asdf-golang = {
+      url = "github:kennyp/asdf-golang";
+      flake = false;
+    };
+    # https://github.com/smashedtoatoms/asdf-sbcl
+    asdf-sbcl = {
+      url = "github:smashedtoatoms/asdf-sbcl";
+      flake = false;
+    };
+    asdf-deno = {
+      url = "github:asdf-community/asdf-deno";
+      flake = false;
+    };
+    asdf-crystal = {
+      url = "github:asdf-community/asdf-crystal";
+      flake = false;
+    };
+    asdf-elixir = {
+      url = "github:asdf-vm/asdf-elixir";
+      flake = false;
+    };
+    asdf-haskell = {
+      url = "github:asdf-community/asdf-haskell";
+      flake = false;
+    };
+    asdf-janet = {
+      url = "github:Jakski/asdf-janet";
+      flake = false;
+    };
+    asdf-lua = {
+      url = "github:Stratus3D/asdf-lua";
+      flake = false;
+    };
+    asdf-ocaml = {
+      url = "github:asdf-community/asdf-ocaml";
+      flake = false;
+    };
+    asdf-chezscheme = {
+      url = "github:asdf-community/asdf-chezscheme";
+      flake = false;
+    };
+    asdf-bun = {
+      url = "github:cometkim/asdf-bun";
+      flake = false;
+    };
+    asdf-pnpm = {
+      url = "github:jonathanmorley/asdf-pnpm";
+      flake = false;
+    };
+    asdf-racket = {
+      url = "github:asdf-community/asdf-racket";
+      flake = false;
+    };
+    asdf-scala = {
+      url = "github:asdf-community/asdf-scala";
+      flake = false;
+    };
+    asdf-hashicorp = {
+      url = "github:asdf-community/asdf-hashicorp";
+      flake = false;
+    };
+    asdf-solidity = {
+      url = "github:diegodorado/asdf-solidity";
+      flake = false;
+    };
+    asdf-nim = {
+      url = "github:asdf-community/asdf-nim";
+      flake = false;
+    };
+    asdf-v = {
+      url = "github:ndac-todoroki/asdf-v";
+      flake = false;
+    };
+    asdf-yarn = {
+      url = "github:twuni/asdf-yarn";
+      flake = false;
+    };
+    asdf-zig = {
+      url = "github:cheetah/asdf-zig";
+      flake = false;
+    };
+    asdf-ninja = {
+      url = "github:asdf-community/asdf-ninja";
+      flake = false;
+    };
   };
 
   outputs = inputs @ {
