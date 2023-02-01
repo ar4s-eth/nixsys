@@ -19,11 +19,11 @@
       trusted-users = ["${config.user.name}" "root" "@admin" "@wheel"];
       trusted-substituters = [
         "https://cache.nixos.org"
-        "https://kclejeune.cachix.org"
+        "https://ar4s.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "kclejeune.cachix.org-1:fOCrECygdFZKbMxHClhiTS6oowOkJ/I/dh9q9b1I4ko="
+        "ar4s.cachix.org-1:kqfT6BHhZ+HUzqWY2wDyhVOlTafqqQKHhK+TM5smie4="
       ];
     };
     gc = {

@@ -4,6 +4,6 @@
   pkgs,
   ...
 }: {
-  user.name = "kclejeune";
+  user.name = "ar4s";
   hm = {imports = [./home-manager/personal.nix];};
 }

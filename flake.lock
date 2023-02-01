@@ -9,13 +9,13 @@
       "locked": {
         "lastModified": 1671329826,
         "narHash": "sha256-Dv2refU5Q5C/3W5osuIbto1xeEQYVYTZkTD/glnQNho=",
-        "owner": "kclejeune",
+        "owner": "ar4s",
         "repo": "nix-darwin",
         "rev": "7c597f21bc8596f91ffa2657848d178d8817a63e",
         "type": "github"
       },
       "original": {
-        "owner": "kclejeune",
+        "owner": "ar4s",
         "repo": "nix-darwin",
         "type": "github"
       }

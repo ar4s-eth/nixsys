@@ -2,11 +2,11 @@
   description = "nix system configurations";
 
   nixConfig = {
-    substituters = ["https://cache.nixos.org" "https://kclejeune.cachix.org"];
+    substituters = ["https://cache.nixos.org" "https://ar4s.cachix.org"];
 
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "kclejeune.cachix.org-1:fOCrECygdFZKbMxHClhiTS6oowOkJ/I/dh9q9b1I4ko="
+      "ar4s.cachix.org-1:kqfT6BHhZ+HUzqWY2wDyhVOlTafqqQKHhK+TM5smie4="
     ];
   };
 
@@ -22,7 +22,7 @@
     # system management
     nixos-hardware.url = "github:nixos/nixos-hardware";
     darwin = {
-      url = "github:kclejeune/nix-darwin";
+      url = "github:ar4s/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -278,7 +278,7 @@
     mkChecks = {
       arch,
       os,
-      username ? "kclejeune",
+      username ? "ar4s",
     }: {
       "${arch}-${os}" = {
         "${username}_${os}" =
@@ -318,11 +318,11 @@
       });
 
     darwinConfigurations = {
-      "kclejeune@aarch64-darwin" = mkDarwinConfig {
+      "ar4s@aarch64-darwin" = mkDarwinConfig {
         system = "aarch64-darwin";
         extraModules = [./profiles/personal.nix ./modules/darwin/apps.nix];
       };
-      "kclejeune@x86_64-darwin" = mkDarwinConfig {
+      "ar4s@x86_64-darwin" = mkDarwinConfig {
         system = "x86_64-darwin";
         extraModules = [./profiles/personal.nix ./modules/darwin/apps.nix];
       };
@@ -337,7 +337,7 @@
     };
 
     nixosConfigurations = {
-      "kclejeune@x86_64-linux" = mkNixosConfig {
+      "ar4s@x86_64-linux" = mkNixosConfig {
         system = "x86_64-linux";
         hardwareModules = [
           ./modules/hardware/phil.nix
@@ -345,7 +345,7 @@
         ];
         extraModules = [./profiles/personal.nix];
       };
-      "kclejeune@aarch64-linux" = mkNixosConfig {
+      "ar4s@aarch64-linux" = mkNixosConfig {
         system = "aarch64-linux";
         hardwareModules = [./modules/hardware/phil.nix];
         extraModules = [./profiles/personal.nix];
@@ -353,23 +353,23 @@
     };
 
     homeConfigurations = {
-      "kclejeune@x86_64-linux" = mkHomeConfig {
-        username = "kclejeune";
+      "ar4s@x86_64-linux" = mkHomeConfig {
+        username = "ar4s";
         system = "x86_64-linux";
         extraModules = [./profiles/home-manager/personal.nix];
       };
-      "kclejeune@aarch64-linux" = mkHomeConfig {
-        username = "kclejeune";
+      "ar4s@aarch64-linux" = mkHomeConfig {
+        username = "ar4s";
         system = "aarch64-linux";
         extraModules = [./profiles/home-manager/personal.nix];
       };
-      "kclejeune@x86_64-darwin" = mkHomeConfig {
-        username = "kclejeune";
+      "ar4s@x86_64-darwin" = mkHomeConfig {
+        username = "ar4s";
         system = "x86_64-darwin";
         extraModules = [./profiles/home-manager/personal.nix];
       };
-      "kclejeune@aarch64-darwin" = mkHomeConfig {
-        username = "kclejeune";
+      "ar4s@aarch64-darwin" = mkHomeConfig {
+        username = "ar4s";
         system = "aarch64-darwin";
         extraModules = [./profiles/home-manager/personal.nix];
       };
